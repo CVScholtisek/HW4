@@ -11,12 +11,11 @@ using std::getline;
 
 
 int main() {
-    cout << "Please type in some text. When you are done, type \"End\", \"end\", or \"END\":" << endl;
+    cout << "Please type in some text. When you are done, type \"end\":" << endl;
     string str;
-    getline(cin,str);
-    while (str != "end" or str != "END" or str != "End"){
+    do{
         Readline(str);
-    }
+    } while (str != "end");
 
     return 0;
 }

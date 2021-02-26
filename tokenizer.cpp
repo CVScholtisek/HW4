@@ -14,6 +14,7 @@ using std::endl;
 using std::getline;
 
 bool Readline(string& str){
+    getline(cin,str);
     if (str == ""){
         return false;
     } else{
