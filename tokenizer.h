@@ -25,7 +25,7 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens);
 //determines if token is integer, identifier(starts with letter of underscore character and
 //followed by A-Z,a-z,0-9,or_), string, whitespace, or unknown. Should print out type of
 //token surrounded by quotation marks
-void AnalyzeTokens(const vector<string>& tokens);
+void AnalyzeTokens(vector<string>& tokens);
 
 
 #endif //HW4_TOKENIZER_H

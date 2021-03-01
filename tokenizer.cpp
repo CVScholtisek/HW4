@@ -36,11 +36,47 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens){
         tokens.push_back(word);
         tokennum += 1;
     }
-    //If line is empty, add empty object to vector
-    if (input == ""){
-        tokens.push_back("");
-    }
+    //add empty object to vector at end of line
+    tokens.push_back("");
     return tokennum;
+}
 
+void AnalyzeTokens(vector<string>& tokens){
+    vector<string> tokentype;
+    for (auto i:tokens){
+        int tempint = 0;
+        //check if token is whitespace
+        if (i == ""){
+            tokentype.push_back("whitespace");
+            continue;
+        }else{
+            //check if token is integer
+            for (auto x:i){
+                if (isdigit(x)){
+                    tempint += 1;
+                }
+            }
+            if (tempint == i.length()){
+                tokentype.push_back("integer   ");
+            }
 
+            //check if token is identifier
+            else if (isalpha(i.at(0)) or i.at(0) == '_'){
+                tokentype.push_back("identifier");
+            }
+            //check if token is string
+            else if (i.front() == '"' and i.back() == '"'){
+                tokentype.push_back("string    ");
+            }
+            //check if token is unknown
+            else{
+                tokentype.push_back("unknown   ");
+            }
+        }
+
+    }
+    //Print out token type and corresponding token
+    for (int i = 0; i < tokentype.size() - 1;i++){
+        cout << "[" << tokentype[i] << "]  -  \"" << tokens[i] << "\"" << endl;
+    }
 }
