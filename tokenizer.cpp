@@ -29,11 +29,14 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens){
     istringstream instream(input);
     //store word
     string word;
+    //initialize number of token count
     int tokennum = 0;
+    //for each word, add word to vector and increase token count by one
     while (instream >> word){
         tokens.push_back(word);
         tokennum += 1;
     }
+    //If line is empty, add empty object to vector
     if (input == ""){
         tokens.push_back("");
     }
