@@ -4,6 +4,7 @@
 
 #include <iostream>
 #include <vector>
+#include <sstream>
 #include "tokenizer.h"
 
 using std::cout;
@@ -12,6 +13,7 @@ using std::vector;
 using std::string;
 using std::endl;
 using std::getline;
+using std::istringstream;
 
 bool Readline(string& str){
     getline(cin,str);
@@ -20,4 +22,18 @@ bool Readline(string& str){
     } else{
         return true;
     }
+}
+
+unsigned StringToTokenWS(const string& input, vector<string>& tokens){
+    //split string around spaces
+    istringstream instream(input);
+    //store word
+    string word;
+    int tokennum = 0;
+    while (instream >> word){
+        tokennum += 1;
+    }
+    return tokennum;
+
+
 }

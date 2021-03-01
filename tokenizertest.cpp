@@ -13,9 +13,12 @@ using std::getline;
 int main() {
     cout << "Please type in some text. When you are done, type \"end\":" << endl;
     string str;
+    vector<string> tokens;
     do{
         Readline(str);
+        StringToTokenWS(str,tokens);
     } while (str != "end");
+
 
     return 0;
 }
