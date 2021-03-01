@@ -31,7 +31,11 @@ unsigned StringToTokenWS(const string& input, vector<string>& tokens){
     string word;
     int tokennum = 0;
     while (instream >> word){
+        tokens.push_back(word);
         tokennum += 1;
+    }
+    if (input == ""){
+        tokens.push_back("");
     }
     return tokennum;
 

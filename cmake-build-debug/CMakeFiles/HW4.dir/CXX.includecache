@@ -6,17 +6,19 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/Clinterpottrmus/CLionProjects/HW4/tokenizer.h
+C:/Users/Clinterpottrmus/CLionProjects/HW4/tokenizer.cpp
 iostream
 -
 vector
 -
-
-C:/Users/Clinterpottrmus/CLionProjects/HW4/tokenizertest.cpp
-iostream
--
-vector
+sstream
 -
 tokenizer.h
 C:/Users/Clinterpottrmus/CLionProjects/HW4/tokenizer.h
+
+C:/Users/Clinterpottrmus/CLionProjects/HW4/tokenizer.h
+iostream
+-
+vector
+-
 

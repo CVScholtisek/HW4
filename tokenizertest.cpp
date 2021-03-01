@@ -17,8 +17,10 @@ int main() {
     do{
         Readline(str);
         StringToTokenWS(str,tokens);
+        for (int i=0;i < tokens.size();i++){
+            cout << tokens.at(i) << endl;
+        }
     } while (str != "end");
-
 
     return 0;
 }
